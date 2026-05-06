@@ -5,7 +5,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>CEKA Reinigungsprofis · Reinigungsdienst aus Seevetal bei Hamburg</title>
 <meta name="description" content="CEKA Reinigungsprofis aus Seevetal — Treppenhaus-, Praxis-, Schul- und Sonderreinigung im Hamburger Süden. Persönlich, zuverlässig, umweltfreundlich."/>
+<meta name="robots" content="index, follow"/>
+<meta name="keywords" content="Reinigung Seevetal, Reinigungsdienst Hamburg Süd, Treppenhausreinigung Seevetal, Praxisreinigung Harburg, Unterhaltsreinigung Hamburg, Gebäudereinigung Winsen, Sonderreinigung Buchholz, CEKA Reinigungsprofis"/>
+<link rel="canonical" href="https://ceka-reinigung.de/"/>
 <link rel="icon" type="image/png" href="assets/ceka-favicon.png"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://ceka-reinigung.de/"/>
+<meta property="og:site_name" content="CEKA Reinigungsprofis"/>
+<meta property="og:locale" content="de_DE"/>
+<meta property="og:title" content="CEKA Reinigungsprofis · Reinigungsdienst aus Seevetal bei Hamburg"/>
+<meta property="og:description" content="Inhabergeführter Reinigungsbetrieb aus Seevetal. Treppenhaus-, Praxis-, Schul- und Sonderreinigung im Hamburger Süden — persönlich, zuverlässig, umweltfreundlich."/>
+<meta property="og:image" content="https://ceka-reinigung.de/assets/Sozial-ceka.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="CEKA Reinigungsprofis – Reinigungsdienst aus Seevetal bei Hamburg"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="CEKA Reinigungsprofis · Reinigungsdienst aus Seevetal bei Hamburg"/>
+<meta name="twitter:description" content="Inhabergeführter Reinigungsbetrieb aus Seevetal. Treppenhaus-, Praxis-, Schul- und Sonderreinigung im Hamburger Süden."/>
+<meta name="twitter:image" content="https://ceka-reinigung.de/assets/Sozial-ceka.png"/>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://ceka-reinigung.de/#business",
+  "name": "CEKA Reinigungsprofis",
+  "description": "Inhabergeführter Reinigungsbetrieb aus Seevetal bei Hamburg. Treppenhaus-, Praxis-, Schul- und Sonderreinigung im Hamburger Süden.",
+  "url": "https://ceka-reinigung.de",
+  "telephone": "+4917631429154",
+  "email": "info@ceka-reinigung.de",
+  "image": "https://ceka-reinigung.de/assets/Sozial-ceka.png",
+  "logo": "https://ceka-reinigung.de/assets/ceka-logo.png",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Beckedorfer Straße 100",
+    "addressLocality": "Seevetal",
+    "postalCode": "21218",
+    "addressRegion": "Niedersachsen",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.3812,
+    "longitude": 9.9993
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Seevetal" },
+    { "@type": "City", "name": "Hamburg-Harburg" },
+    { "@type": "City", "name": "Winsen (Luhe)" },
+    { "@type": "City", "name": "Buchholz in der Nordheide" }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "07:00",
+    "closes": "18:00"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Reinigungsleistungen",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Unterhaltsreinigung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Treppenhausreinigung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Grundreinigung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fensterreinigung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Praxisreinigung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Schulreinigung" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sonderreinigung" } }
+    ]
+  }
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -26,6 +102,63 @@
   ::selection { background: #C2E5A8; color: #14210C; }
   html { scroll-behavior: smooth; }
   :root { --ceka-primary: #369507; }
+
+  /* ── Scroll reveal animations ── */
+  @keyframes ceka-fade-up {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes ceka-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes ceka-slide-left {
+    from { opacity: 0; transform: translateX(-36px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes ceka-slide-right {
+    from { opacity: 0; transform: translateX(36px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes ceka-scale-up {
+    from { opacity: 0; transform: scale(0.94) translateY(16px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .ceka-reveal          { opacity: 0; }
+  .ceka-reveal-left     { opacity: 0; }
+  .ceka-reveal-right    { opacity: 0; }
+  .ceka-reveal-fade     { opacity: 0; }
+  .ceka-reveal-scale    { opacity: 0; }
+
+  .ceka-reveal.visible       { animation: ceka-fade-up   0.65s cubic-bezier(.22,.8,.22,1) both; }
+  .ceka-reveal-left.visible  { animation: ceka-slide-left  0.65s cubic-bezier(.22,.8,.22,1) both; }
+  .ceka-reveal-right.visible { animation: ceka-slide-right 0.65s cubic-bezier(.22,.8,.22,1) both; }
+  .ceka-reveal-fade.visible  { animation: ceka-fade-in   0.7s ease both; }
+  .ceka-reveal-scale.visible { animation: ceka-scale-up  0.65s cubic-bezier(.22,.8,.22,1) both; }
+
+  /* Hero entrance (fires on load, no IntersectionObserver needed) */
+  @keyframes ceka-hero-in {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .ceka-hero-badge { animation: ceka-hero-in 0.6s 0.05s cubic-bezier(.22,.8,.22,1) both; }
+  .ceka-hero-h1    { animation: ceka-hero-in 0.7s 0.18s cubic-bezier(.22,.8,.22,1) both; }
+  .ceka-hero-desc  { animation: ceka-hero-in 0.7s 0.32s cubic-bezier(.22,.8,.22,1) both; }
+  .ceka-hero-btns  { animation: ceka-hero-in 0.7s 0.46s cubic-bezier(.22,.8,.22,1) both; }
+  .ceka-hero-tags  { animation: ceka-hero-in 0.6s 0.58s cubic-bezier(.22,.8,.22,1) both; }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .ceka-reveal, .ceka-reveal-left, .ceka-reveal-right,
+    .ceka-reveal-fade, .ceka-reveal-scale,
+    .ceka-hero-badge, .ceka-hero-h1, .ceka-hero-desc,
+    .ceka-hero-btns, .ceka-hero-tags {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
 
   /* Responsive */
   @media (max-width: 980px) {

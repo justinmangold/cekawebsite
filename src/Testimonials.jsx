@@ -1,4 +1,4 @@
-/* global React, Container, Section, Eyebrow, Icon */
+/* global React, Container, Section, Eyebrow, Icon, Reveal */
 
 const TESTIMONIALS = [
   {
@@ -21,10 +21,7 @@ const TESTIMONIALS = [
 const Testimonials = () => (
   <Section tone="white" pad="lg" id="refs">
     <Container>
-      <div style={{
-        display: 'flex', flexDirection: 'column', alignItems: 'center',
-        textAlign: 'center', gap: 14, marginBottom: 48,
-      }}>
+      <Reveal direction="up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 14, marginBottom: 48 }}>
         <Eyebrow>Kundenstimmen</Eyebrow>
         <h2 style={{
           fontFamily: 'Inter, sans-serif', fontWeight: 700,
@@ -34,14 +31,15 @@ const Testimonials = () => (
         }}>
           Was unsere Kunden sagen.
         </h2>
-      </div>
+      </Reveal>
 
       <div style={{
         display: 'grid', gap: 20,
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
       }}>
         {TESTIMONIALS.map((t, i) => (
-          <figure key={i} style={{
+          <Reveal key={i} direction="up" delay={i * 100}>
+          <figure style={{
             margin: 0, padding: 28, borderRadius: 20,
             background: '#F7FAF4', border: '1px solid #E2E6DE',
             display: 'flex', flexDirection: 'column', gap: 16,
@@ -60,6 +58,7 @@ const Testimonials = () => (
               <div style={{ fontSize: 13, color: '#5C6B55' }}>{t.role}</div>
             </figcaption>
           </figure>
+          </Reveal>
         ))}
       </div>
     </Container>

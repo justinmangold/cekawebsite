@@ -40,7 +40,7 @@ const Hero = ({ tweaks = {}, setTweak }) => {
             padding: 'clamp(80px, 12vw, 140px) 0',
           }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24, maxWidth: 640, width: '100%' }}>
-              <div style={{
+              <div className="ceka-hero-badge" style={{
                 display: 'inline-flex', alignSelf: 'flex-start',
                 padding: '6px 14px', borderRadius: 999,
                 background: 'rgba(255,255,255,0.15)',
@@ -49,6 +49,7 @@ const Hero = ({ tweaks = {}, setTweak }) => {
                 textTransform: 'uppercase', color: '#fff',
               }}>Reinigungsdienst aus Seevetal</div>
               <h1
+                className="ceka-hero-h1"
                 contentEditable={!!setTweak} suppressContentEditableWarning
                 onBlur={(e) => setTweak?.('heroHeadline', e.currentTarget.innerText)}
                 style={{
@@ -66,7 +67,7 @@ const Hero = ({ tweaks = {}, setTweak }) => {
                   </span>
                 ))}
               </h1>
-              <p style={{
+              <p className="ceka-hero-desc" style={{
                 fontFamily: 'Inter, sans-serif', fontSize: 18, lineHeight: 1.55,
                 color: 'rgba(255,255,255,0.86)', margin: 0, maxWidth: 520,
               }}>
@@ -74,7 +75,7 @@ const Hero = ({ tweaks = {}, setTweak }) => {
                 und mit umweltfreundlichen Mitteln. Angebot direkt vor Ort,
                 kostenlos und unverbindlich.
               </p>
-              <div className="ceka-hero-buttons" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 8 }}>
+              <div className="ceka-hero-buttons ceka-hero-btns" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 8 }}>
                 <Button variant="primary" size="lg" iconRight="arrowRight"
                         onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
                   Angebot anfordern
@@ -84,7 +85,7 @@ const Hero = ({ tweaks = {}, setTweak }) => {
                   Leistungen ansehen
                 </Button>
               </div>
-              <div style={{ display: 'flex', gap: 20, marginTop: 8, flexWrap: 'wrap', fontSize: 14, color: 'rgba(255,255,255,0.85)' }}>
+              <div className="ceka-hero-tags" style={{ display: 'flex', gap: 20, marginTop: 8, flexWrap: 'wrap', fontSize: 14, color: 'rgba(255,255,255,0.85)' }}>
                 {['Geschultes Team', 'Faire Festpreise', 'Umweltfreundlich'].map(t => (
                   <span key={t} style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
                     <Icon name="check" size={16} color="#A8E08A"/> {t}

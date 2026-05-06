@@ -1,4 +1,4 @@
-/* global React, Container, Section, Button, Icon, Eyebrow */
+/* global React, Container, Section, Button, Icon, Eyebrow, Reveal */
 
 const POINTS = [
   { icon: 'check',  title: 'Festes, geschultes Team',     desc: 'Keine wechselnden Subunternehmer — Sie kennen die Menschen, die bei Ihnen reinigen.' },
@@ -15,7 +15,7 @@ const WhyCeka = () => (
       <div className="ceka-why-grid" style={{
         display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 64, alignItems: 'flex-start',
       }}>
-        <div>
+        <Reveal direction="left">
           <div style={{
             fontSize: 12, fontWeight: 600, color: '#A8E08A',
             letterSpacing: '0.12em', textTransform: 'uppercase',
@@ -42,11 +42,12 @@ const WhyCeka = () => (
               Jetzt Angebot anfordern
             </Button>
           </div>
-        </div>
+        </Reveal>
 
         <div className="ceka-why-cards" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
           {POINTS.map((p, i) => (
-            <div key={i} style={{
+            <Reveal key={i} direction="up" delay={i * 70}>
+            <div style={{
               padding: '22px 22px',
               borderRadius: 16,
               background: 'rgba(255,255,255,0.06)',
@@ -71,6 +72,7 @@ const WhyCeka = () => (
                 }}>{p.desc}</div>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>

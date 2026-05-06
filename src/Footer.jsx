@@ -10,21 +10,47 @@ const Footer = () => (
   }}>
     <Container>
       <div className="ceka-footer-grid" style={{
-        display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: 48,
+        display: 'grid', gridTemplateColumns: '1.6fr 0.9fr 1.1fr 1fr', gap: 48,
         marginBottom: 48,
       }}>
+        {/* Logo + Beschreibung */}
         <div>
           <img src="assets/ceka-logo.png" alt="Ceka Reinigungs Profis"
                style={{ height: 64, width: 'auto', marginBottom: 18 }}/>
           <p style={{
             fontFamily: 'Inter, sans-serif', fontSize: 14, lineHeight: 1.6,
-            color: '#5C6B55', margin: 0, maxWidth: 320,
+            color: '#5C6B55', margin: 0, maxWidth: 280,
           }}>
             Ihr Reinigungsdienst aus Seevetal bei Hamburg. Zuverlässig,
             geschult und umweltfreundlich — inhabergeführt von Julien Ceka.
           </p>
         </div>
 
+        {/* Menü */}
+        <div>
+          <h4 style={{
+            fontFamily: 'Inter, sans-serif', fontSize: 13, fontWeight: 600,
+            letterSpacing: '0.12em', textTransform: 'uppercase',
+            color: '#369507', margin: '0 0 16px',
+          }}>Menü</h4>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {[
+              { label: 'Leistungen', id: 'services' },
+              { label: 'Warum Ceka', id: 'why' },
+              { label: 'Über uns', id: 'about' },
+              { label: 'So arbeiten wir', id: 'process' },
+              { label: 'FAQ', id: 'faq' },
+              { label: 'Kontakt', id: 'contact' },
+            ].map(l => (
+              <li key={l.id}><a href={`#${l.id}`} style={{
+                fontFamily: 'Inter, sans-serif', fontSize: 14, color: '#14210C',
+                textDecoration: 'none',
+              }}>{l.label}</a></li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Leistungen */}
         <div>
           <h4 style={{
             fontFamily: 'Inter, sans-serif', fontSize: 13, fontWeight: 600,
@@ -32,7 +58,11 @@ const Footer = () => (
             color: '#369507', margin: '0 0 16px',
           }}>Leistungen</h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
-            {['Unterhaltsreinigung', 'Grundreinigung', 'Treppenhausreinigung', 'Fensterreinigung'].map(l => (
+            {[
+              'Unterhaltsreinigung', 'Grundreinigung', 'Treppenhausreinigung',
+              'Fensterreinigung', 'Praxisreinigung', 'Schulreinigung',
+              'Sonderreinigung', 'Baucontainer',
+            ].map(l => (
               <li key={l}><a href="#services" style={{
                 fontFamily: 'Inter, sans-serif', fontSize: 14, color: '#14210C',
                 textDecoration: 'none',
@@ -41,22 +71,7 @@ const Footer = () => (
           </ul>
         </div>
 
-        <div>
-          <h4 style={{
-            fontFamily: 'Inter, sans-serif', fontSize: 13, fontWeight: 600,
-            letterSpacing: '0.12em', textTransform: 'uppercase',
-            color: '#369507', margin: '0 0 16px',
-          }}>Branchen</h4>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
-            {['Praxisreinigung', 'Schulreinigung', 'Sonderreinigung', 'Baucontainer'].map(l => (
-              <li key={l}><a href="#services" style={{
-                fontFamily: 'Inter, sans-serif', fontSize: 14, color: '#14210C',
-                textDecoration: 'none',
-              }}>{l}</a></li>
-            ))}
-          </ul>
-        </div>
-
+        {/* Kontakt */}
         <div>
           <h4 style={{
             fontFamily: 'Inter, sans-serif', fontSize: 13, fontWeight: 600,

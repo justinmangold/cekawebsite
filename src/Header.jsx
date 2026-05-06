@@ -44,12 +44,12 @@ const Header = () => {
         <Container>
           <div style={{
             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-            height: 72, gap: 24,
+            height: 80, gap: 24,
           }}>
             <a href="#" onClick={(e) => { e.preventDefault(); goTo('home'); }}
                style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
               <img src="assets/ceka-logo.png" alt="Ceka Reinigungs Profis"
-                   style={{ height: 52, width: 'auto' }}/>
+                   style={{ height: 64, width: 'auto' }}/>
             </a>
 
             <nav className="ceka-desktop-nav" style={{

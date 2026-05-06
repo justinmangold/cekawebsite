@@ -1,4 +1,4 @@
-/* global React, Container, Section, Eyebrow, Icon */
+/* global React, Container, Section, Eyebrow, Icon, Reveal */
 
 const STEPS = [
   { num: '01', title: 'Anfrage', desc: 'Sie kontaktieren uns telefonisch oder über das Formular — kurz schildern, worum es geht.' },
@@ -10,10 +10,7 @@ const STEPS = [
 const Process = () => (
   <Section tone="tint" pad="lg" id="process">
     <Container>
-      <div style={{
-        display: 'flex', flexDirection: 'column', alignItems: 'center',
-        textAlign: 'center', gap: 14, marginBottom: 56,
-      }}>
+      <Reveal direction="up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 14, marginBottom: 56 }}>
         <Eyebrow>So arbeiten wir</Eyebrow>
         <h2 style={{
           fontFamily: 'Inter, sans-serif', fontWeight: 700,
@@ -23,14 +20,15 @@ const Process = () => (
         }}>
           Vier Schritte. Keine Überraschungen.
         </h2>
-      </div>
+      </Reveal>
 
       <div style={{
         display: 'grid', gap: 16,
         gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
       }}>
         {STEPS.map((s, i) => (
-          <div key={s.num} style={{
+          <Reveal key={s.num} direction="up" delay={i * 100}>
+          <div style={{
             position: 'relative',
             background: '#fff', borderRadius: 20, padding: 28,
             border: '1px solid #C2E5A8',
@@ -57,6 +55,7 @@ const Process = () => (
               </div>
             )}
           </div>
+          </Reveal>
         ))}
       </div>
     </Container>

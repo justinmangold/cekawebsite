@@ -1,4 +1,4 @@
-/* global React, Container, Section, Eyebrow, Icon */
+/* global React, Container, Section, Eyebrow, Icon, Reveal */
 const { useState } = React;
 
 const SERVICES = [
@@ -102,10 +102,7 @@ const ServiceCard = ({ icon, title, desc, bullets, featured }) => {
 const Services = () => (
   <Section tone="alt" pad="lg" id="services">
     <Container>
-      <div style={{
-        display: 'flex', flexDirection: 'column', alignItems: 'center',
-        textAlign: 'center', gap: 14, marginBottom: 56,
-      }}>
+      <Reveal direction="up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 14, marginBottom: 56 }}>
         <Eyebrow>Unsere Leistungen</Eyebrow>
         <h2 style={{
           fontFamily: 'Inter, sans-serif', fontWeight: 700,
@@ -122,13 +119,17 @@ const Services = () => (
           Wir betreuen Wohngebäude, Praxen, Schulen und Baustellen
           im Hamburger Süden. Kein Job zu klein, kein Standard zu hoch.
         </p>
-      </div>
+      </Reveal>
 
       <div style={{
         display: 'grid', gap: 20,
         gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
       }}>
-        {SERVICES.map(s => <ServiceCard key={s.title} {...s}/>)}
+        {SERVICES.map((s, i) => (
+          <Reveal key={s.title} direction="scale" delay={i * 60} style={{ height: '100%' }}>
+            <ServiceCard {...s}/>
+          </Reveal>
+        ))}
       </div>
     </Container>
   </Section>

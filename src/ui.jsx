@@ -121,4 +121,32 @@ const Eyebrow = ({ children, style = {} }) => (
   }}>{children}</div>
 );
 
-Object.assign(window, { Icon, Button, Container, Section, Eyebrow });
+/* ============ Scroll reveal ============ */
+const Reveal = ({ children, direction = 'up', delay = 0, style = {}, className = '' }) => {
+  const ref = React.useRef(null);
+  const [visible, setVisible] = React.useState(false);
+  React.useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setVisible(true); obs.disconnect(); }
+    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  const cls = {
+    up:    'ceka-reveal',
+    left:  'ceka-reveal-left',
+    right: 'ceka-reveal-right',
+    fade:  'ceka-reveal-fade',
+    scale: 'ceka-reveal-scale',
+  }[direction] || 'ceka-reveal';
+  return (
+    <div ref={ref} className={`${cls}${visible ? ' visible' : ''} ${className}`}
+         style={{ animationDelay: `${delay}ms`, ...style }}>
+      {children}
+    </div>
+  );
+};
+
+Object.assign(window, { Icon, Button, Container, Section, Eyebrow, Reveal });

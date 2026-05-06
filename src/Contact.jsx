@@ -1,4 +1,4 @@
-/* global React, Button, Container, Section, Eyebrow, Icon, SERVICES */
+/* global React, Button, Container, Section, Eyebrow, Icon, SERVICES, Reveal */
 const { useState } = React;
 
 const Field = ({ label, children, help, error }) => (
@@ -54,7 +54,7 @@ const Contact = () => {
           display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 56, alignItems: 'flex-start',
         }}>
           {/* Left: contact info card */}
-          <div>
+          <Reveal direction="left"><div>
             <Eyebrow>Angebot anfordern</Eyebrow>
             <h2 style={{
               fontFamily: 'Inter, sans-serif', fontWeight: 700,
@@ -116,9 +116,10 @@ const Contact = () => {
                 <span style={{ color: '#5C6B55' }}>An Werktagen rufen wir tagsüber zurück.</span>
               </div>
             </div>
-          </div>
+          </div></Reveal>
 
           {/* Right: form */}
+          <Reveal direction="right">
           {submitted ? (
             <div style={{
               background: '#fff', borderRadius: 24, padding: 'clamp(28px, 4vw, 48px)',
@@ -211,6 +212,7 @@ const Contact = () => {
               </div>
             </form>
           )}
+          </Reveal>
         </div>
       </Container>
     </Section>

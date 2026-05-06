@@ -1,4 +1,4 @@
-/* global React, Container, Section, Eyebrow, Icon */
+/* global React, Container, Section, Eyebrow, Icon, Reveal */
 
 const About = ({ tweaks = {} }) => {
   const wireframe = tweaks.wireframe;
@@ -8,6 +8,7 @@ const About = ({ tweaks = {} }) => {
         <div className="ceka-about-grid" style={{
           display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 64, alignItems: 'center',
         }}>
+          <Reveal direction="left" style={{ position: 'relative' }}>
           <div className="ceka-about-image" style={{
             position: 'relative', aspectRatio: '1/1',
             borderRadius: 24, overflow: 'hidden',
@@ -25,18 +26,10 @@ const About = ({ tweaks = {} }) => {
                 fontFamily: 'Inter', color: '#5C6B55', fontWeight: 600,
               }}>Team-Bild</div>
             )}
-            <div style={{
-              position: 'absolute', left: 20, bottom: 20, right: 20,
-              background: 'rgba(255,255,255,0.96)', backdropFilter: 'blur(8px)',
-              borderRadius: 14, padding: '14px 18px',
-              boxShadow: '0 8px 20px rgba(20,33,12,0.12)',
-            }}>
-              <div style={{ fontSize: 13, color: '#5C6B55', marginBottom: 2 }}>Inhaber</div>
-              <div style={{ fontSize: 16, fontWeight: 600, color: '#14210C' }}>Julien Ceka</div>
-            </div>
           </div>
+          </Reveal>
 
-          <div>
+          <Reveal direction="right">
             <Eyebrow>Über uns</Eyebrow>
             <h2 style={{
               fontFamily: 'Inter, sans-serif', fontWeight: 700,
@@ -86,7 +79,7 @@ const About = ({ tweaks = {} }) => {
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </Container>
     </Section>

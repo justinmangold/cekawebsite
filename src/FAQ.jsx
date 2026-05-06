@@ -1,4 +1,4 @@
-/* global React, Container, Section, Eyebrow, Icon */
+/* global React, Container, Section, Eyebrow, Icon, Reveal */
 const { useState } = React;
 
 const FAQS = [
@@ -52,7 +52,7 @@ const Item = ({ q, a, open, onToggle }) => (
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         transition: 'all 220ms cubic-bezier(.2,.7,.2,1)',
         transform: open ? 'rotate(45deg)' : 'rotate(0)',
-        fontSize: 22, lineHeight: 1, fontWeight: 300,
+        fontSize: 20, lineHeight: '32px', fontWeight: 400,
       }}>+</span>
     </button>
     <div style={{
@@ -72,10 +72,7 @@ const FAQ = () => {
   return (
     <Section tone="alt" pad="lg" id="faq">
       <Container narrow>
-        <div style={{
-          display: 'flex', flexDirection: 'column', alignItems: 'center',
-          textAlign: 'center', gap: 14, marginBottom: 40,
-        }}>
+        <Reveal direction="up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 14, marginBottom: 40 }}>
           <Eyebrow>Häufige Fragen</Eyebrow>
           <h2 style={{
             fontFamily: 'Inter, sans-serif', fontWeight: 700,
@@ -84,13 +81,13 @@ const FAQ = () => {
           }}>
             Antworten auf das, was Sie wissen wollen.
           </h2>
-        </div>
-        <div>
+        </Reveal>
+        <Reveal direction="up" delay={120}>
           {FAQS.map((f, i) => (
             <Item key={i} q={f.q} a={f.a} open={open === i}
                   onToggle={() => setOpen(open === i ? -1 : i)}/>
           ))}
-        </div>
+        </Reveal>
       </Container>
     </Section>
   );
