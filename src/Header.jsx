@@ -36,10 +36,10 @@ const Header = () => {
     <>
       <header style={{
         position: 'sticky', top: 0, zIndex: 100,
-        background: scrolled ? 'rgba(255,255,255,0.96)' : 'rgba(255,255,255,0.92)',
-        borderBottom: scrolled ? '1px solid #ECEFEC' : '1px solid transparent',
+        background: '#ffffff',
+        borderBottom: '1px solid #ECEFEC',
         boxShadow: scrolled ? '0 2px 6px rgba(20, 33, 12, 0.06)' : 'none',
-        transition: 'all 220ms cubic-bezier(.2,.7,.2,1)',
+        transition: 'box-shadow 220ms cubic-bezier(.2,.7,.2,1)',
       }}>
         <Container>
           <div style={{
@@ -96,7 +96,7 @@ const Header = () => {
                       alignItems: 'center', justifyContent: 'center', color: '#14210C',
                       flexShrink: 0,
                     }}>
-              <Icon name={open ? 'close' : 'menu'} size={24}/>
+              <Icon name={open ? 'close' : 'menu'} size={30}/>
             </button>
           </div>
         </Container>

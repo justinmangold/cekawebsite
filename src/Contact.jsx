@@ -198,7 +198,7 @@ const Contact = () => {
                        onChange={e => update('accept', e.target.checked)}
                        style={{ width: 18, height: 18, accentColor: '#369507', marginTop: 2, flex: '0 0 auto' }}/>
                 <span style={{ fontSize: 14, color: '#5C6B55', lineHeight: 1.5 }}>
-                  Ich akzeptiere die <a href="#" onClick={e=>e.preventDefault()} style={{ color: '#369507' }}>Datenschutzerklärung</a> und
+                  Ich akzeptiere die <a href="datenschutz.html" style={{ color: '#369507' }}>Datenschutzerklärung</a> und
                   bin einverstanden, dass meine Anfrage zur Bearbeitung gespeichert wird.
                   {errors.accept && <span style={{ color: '#A8442A', display: 'block', marginTop: 4 }}>{errors.accept}</span>}
                 </span>

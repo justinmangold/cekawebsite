@@ -95,7 +95,7 @@ const Container = ({ children, narrow, style = {} }) => (
   }}>{children}</div>
 );
 
-const Section = ({ tone = 'white', pad = 'lg', children, style = {} }) => {
+const Section = ({ tone = 'white', pad = 'lg', children, style = {}, id }) => {
   const tones = {
     white: { background: '#fff' },
     tint:  { background: '#EAF7E0' },
@@ -108,7 +108,7 @@ const Section = ({ tone = 'white', pad = 'lg', children, style = {} }) => {
     lg: 'clamp(64px, 10vw, 112px) 0',
   };
   return (
-    <section style={{ padding: pads[pad], ...tones[tone], ...style }}>
+    <section id={id} style={{ padding: pads[pad], ...tones[tone], ...style }}>
       {children}
     </section>
   );

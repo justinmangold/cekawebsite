@@ -120,7 +120,7 @@ const CookieBanner = () => {
       </div>
       <div style={{ fontFamily: 'Inter', fontSize: 13.5, lineHeight: 1.5, color: '#5C6B55' }}>
         Wir verwenden nur technisch notwendige Cookies, um die Funktion der Website
-        sicherzustellen. Mehr in der <a href="#" onClick={e=>e.preventDefault()} style={{ color: '#369507' }}>Datenschutzerklärung</a>.
+        sicherzustellen. Mehr in der <a href="datenschutz.html" style={{ color: '#369507' }}>Datenschutzerklärung</a>.
       </div>
       <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
         <button onClick={() => { localStorage.setItem('ceka-cookies', '1'); setShown(false); }}
