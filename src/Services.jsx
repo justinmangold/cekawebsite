@@ -14,7 +14,7 @@ const SERVICES = [
   },
   {
     icon: 'building',    title: 'Treppenhausreinigung',
-    desc: 'Gepflegte Hausflure für Wohngebäude und Mietergemeinschaften im Hamburger Süden.',
+    desc: 'Gepflegte Hausflure für Wohngebäude und Mietergemeinschaften — regelmäßig, zuverlässig, fair kalkuliert.',
     bullets: ['Wöchentlich oder 14-täglich', 'Inkl. Geländer & Briefkästen', 'Faire Monatspauschale'],
     featured: true,
   },
@@ -117,7 +117,7 @@ const Services = () => (
           color: '#5C6B55', margin: 0, maxWidth: 580,
         }}>
           Wir betreuen Wohngebäude, Praxen, Schulen und Baustellen
-          im Hamburger Süden. Kein Job zu klein, kein Standard zu hoch.
+          Kein Job zu klein, kein Standard zu hoch.
         </p>
       </Reveal>
 

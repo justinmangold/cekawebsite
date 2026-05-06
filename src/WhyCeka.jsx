@@ -3,8 +3,8 @@
 const POINTS = [
   { icon: 'check',  title: 'Festes, geschultes Team',     desc: 'Keine wechselnden Subunternehmer — Sie kennen die Menschen, die bei Ihnen reinigen.' },
   { icon: 'leaf',   title: 'Umweltfreundliche Mittel',    desc: 'Standard sind biologisch abbaubare Reiniger und sparsamer Wassereinsatz.' },
-  { icon: 'pin',    title: 'Aus Seevetal — kurze Wege',   desc: 'Wir arbeiten ausschließlich im Hamburger Süden. Schnell vor Ort, persönlich erreichbar.' },
-  { icon: 'phone',  title: 'Persönlicher Ansprechpartner', desc: 'Inhaber Julien Ceka erstellt Ihr Angebot direkt vor Ort — kostenlos und unverbindlich.' },
+  { icon: 'pin',    title: 'Kurze Wege — schnelle Reaktion', desc: 'Wir arbeiten regional und sind schnell vor Ort. Persönlich erreichbar, ohne lange Wartezeiten.' },
+  { icon: 'phone',  title: 'Persönlicher Ansprechpartner', desc: 'Wir erstellen Ihr Angebot direkt vor Ort — kostenlos, unverbindlich und ohne Überraschungen.' },
   { icon: 'sparkles', title: 'Faire Festpreise',          desc: 'Transparente Monatsabrechnung, keine versteckten Kosten, klare Leistungsbeschreibung.' },
   { icon: 'star',   title: 'Versichert & dokumentiert',    desc: 'Vollständig haftpflichtversichert. Reinigungen werden auf Wunsch dokumentiert.' },
 ];
@@ -26,14 +26,14 @@ const WhyCeka = () => (
             letterSpacing: '-0.025em', color: '#fff', margin: '14px 0 18px',
             textWrap: 'balance',
           }}>
-            Ein Familienbetrieb,<br/>kein Konzern.
+            Persönlich.<br/>Professionell.
           </h2>
           <p style={{
             fontFamily: 'Inter, sans-serif', fontSize: 18, lineHeight: 1.55,
             color: 'rgba(255,255,255,0.72)', margin: 0, maxWidth: 460,
           }}>
-            Wir reinigen Treppenhäuser, Praxen und Büros im Hamburger Süden —
-            mit demselben Team, denselben Werten und einem Anspruch:
+            Wir reinigen Treppenhäuser, Praxen und Büros im Großraum Hamburg —
+            mit einem festen Team, klaren Werten und einem Anspruch:
             dass Sie nichts merken, außer dass alles sauber ist.
           </p>
           <div style={{ marginTop: 28 }}>

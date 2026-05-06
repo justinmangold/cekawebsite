@@ -37,15 +37,15 @@ const About = ({ tweaks = {} }) => {
               letterSpacing: '-0.025em', color: '#14210C', margin: '12px 0 18px',
               textWrap: 'balance',
             }}>
-              Aus Seevetal.<br/>Mit Handschlag.
+              Gründlich.<br/>Mit Handschlag.
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               <p style={{
                 fontFamily: 'Inter', fontSize: 17, lineHeight: 1.6, color: '#14210C', margin: 0,
               }}>
-                <strong>CEKA Reinigungsprofis</strong> ist ein inhabergeführter Reinigungsbetrieb
-                aus Seevetal, südlich von Hamburg. Geführt wird das Unternehmen von
-                Julien Ceka — der jeden Auftrag persönlich begutachtet, bevor wir ein Angebot machen.
+                <strong>CEKA Reinigungsprofis</strong> ist ein professioneller Reinigungsbetrieb
+                im Großraum Hamburg. Jeder Auftrag wird persönlich begutachtet und
+                individuell kalkuliert — bevor wir ein Angebot machen.
               </p>
               <p style={{
                 fontFamily: 'Inter', fontSize: 16, lineHeight: 1.6, color: '#5C6B55', margin: 0,
@@ -59,7 +59,7 @@ const About = ({ tweaks = {} }) => {
                 display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginTop: 8,
               }}>
                 {[
-                  { num: '15+', label: 'Jahre Erfahrung im\nHamburger Süden' },
+                  { num: '15+', label: 'Jahre Erfahrung\nim Reinigungsbereich' },
                   { num: '120+', label: 'Betreute Objekte\n in der Region' },
                   { num: '100%', label: 'Festangestelltes,\ngeschultes Team' },
                 ].map(s => (

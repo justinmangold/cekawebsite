@@ -47,7 +47,7 @@ const Hero = ({ tweaks = {}, setTweak }) => {
                 border: '1px solid rgba(255,255,255,0.25)',
                 fontSize: 12, fontWeight: 600, letterSpacing: '0.12em',
                 textTransform: 'uppercase', color: '#fff',
-              }}>Reinigungsdienst aus Seevetal</div>
+              }}>Professioneller Reinigungsdienst</div>
               <h1
                 className="ceka-hero-h1"
                 contentEditable={!!setTweak} suppressContentEditableWarning
@@ -120,7 +120,7 @@ const Hero = ({ tweaks = {}, setTweak }) => {
               display: 'inline-flex', alignSelf: 'flex-start',
               fontSize: 12, fontWeight: 600, color: primary,
               letterSpacing: '0.12em', textTransform: 'uppercase',
-            }}>Reinigungsdienst aus Seevetal bei Hamburg</div>
+            }}>Professioneller Reinigungsdienst</div>
             <h1
               contentEditable={!!setTweak} suppressContentEditableWarning
               onBlur={(e) => setTweak?.('heroHeadline', e.currentTarget.innerText)}
@@ -200,10 +200,10 @@ const Hero = ({ tweaks = {}, setTweak }) => {
               </div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 14, fontWeight: 600, color: '#14210C' }}>
-                  Persönlich. Vor Ort. Aus Seevetal.
+                  Schnell. Gründlich. Zuverlässig.
                 </div>
                 <div style={{ fontSize: 12, color: '#5C6B55' }}>
-                  Inhaber Julien Ceka erstellt Ihr Angebot persönlich.
+                  Kostenloses Angebot direkt vor Ort.
                 </div>
               </div>
             </div>

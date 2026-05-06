@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     q: 'In welchem Gebiet seid ihr tätig?',
-    a: 'Wir arbeiten ausschließlich im Hamburger Süden — Seevetal, Harburg, Winsen (Luhe), Buchholz und Umgebung. Kurze Wege, schnelle Reaktion.',
+    a: 'Wir sind hauptsächlich im Großraum Hamburg tätig. Kurze Wege und schnelle Reaktionszeiten sind uns wichtig — sprechen Sie uns einfach an.',
   },
   {
     q: 'Welche Reinigungsmittel verwendet ihr?',

@@ -21,8 +21,8 @@ const Footer = () => (
             fontFamily: 'Inter, sans-serif', fontSize: 14, lineHeight: 1.6,
             color: '#5C6B55', margin: 0, maxWidth: 280,
           }}>
-            Ihr Reinigungsdienst aus Seevetal bei Hamburg. Zuverlässig,
-            geschult und umweltfreundlich — inhabergeführt von Julien Ceka.
+            Professionelle Gebäudereinigung im Großraum Hamburg.
+            Zuverlässig, geschult und umweltfreundlich.
           </p>
         </div>
 
