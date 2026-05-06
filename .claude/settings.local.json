@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp -r /tmp/ceka_extract/ceka-reinigungs-profis/project/assets /Users/justinmangold/Desktop/cekawebsite/assets)",
+      "Bash(cp -r /tmp/ceka_extract/ceka-reinigungs-profis/project/images /Users/justinmangold/Desktop/cekawebsite/images)",
+      "Bash(cp -r /tmp/ceka_extract/ceka-reinigungs-profis/project/src /Users/justinmangold/Desktop/cekawebsite/src)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python3 -)"
+    ]
+  }
+}

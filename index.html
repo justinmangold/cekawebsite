@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CEKA Reinigungsprofis · Reinigungsdienst aus Seevetal bei Hamburg</title>
+<meta name="description" content="CEKA Reinigungsprofis aus Seevetal — Treppenhaus-, Praxis-, Schul- und Sonderreinigung im Hamburger Süden. Persönlich, zuverlässig, umweltfreundlich."/>
+<link rel="icon" type="image/png" href="assets/ceka-favicon.png"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #14210C;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  img { max-width: 100%; display: block; }
+  ::selection { background: #C2E5A8; color: #14210C; }
+  html { scroll-behavior: smooth; }
+  :root { --ceka-primary: #369507; }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .ceka-hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .ceka-why-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .ceka-about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .ceka-contact-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .ceka-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+    .ceka-process-arrow { display: none !important; }
+  }
+  @media (max-width: 720px) {
+    .ceka-desktop-nav, .ceka-desktop-cta { display: none !important; }
+    .ceka-mobile-burger { display: flex !important; }
+    .ceka-form-row { grid-template-columns: 1fr !important; }
+    .ceka-footer-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+    .ceka-hero-image-wrap { aspect-ratio: 4/4 !important; }
+    /* Full-width hero buttons on mobile */
+    .ceka-hero-buttons { flex-direction: column !important; }
+    .ceka-hero-buttons > button { width: 100% !important; justify-content: center !important; }
+    /* Why Ceka cards: single column on small screens */
+    .ceka-why-cards { grid-template-columns: 1fr !important; }
+    /* About: image below text on mobile, stats 2-col */
+    .ceka-about-image { order: 2 !important; }
+    .ceka-about-stats { grid-template-columns: 1fr 1fr !important; }
+    /* Contact submit button full width */
+    .ceka-contact-submit { justify-content: stretch !important; }
+    .ceka-contact-submit > button { width: 100% !important; justify-content: center !important; }
+    /* Tighter mobile sections */
+    section { padding-top: clamp(56px, 12vw, 80px) !important; padding-bottom: clamp(56px, 12vw, 80px) !important; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="src/tweaks-panel.jsx"></script>
+<script type="text/babel" src="src/ui.jsx"></script>
+<script type="text/babel" src="src/Header.jsx"></script>
+<script type="text/babel" src="src/Hero.jsx"></script>
+<script type="text/babel" src="src/Services.jsx"></script>
+<script type="text/babel" src="src/WhyCeka.jsx"></script>
+<script type="text/babel" src="src/About.jsx"></script>
+<script type="text/babel" src="src/Process.jsx"></script>
+<script type="text/babel" src="src/Testimonials.jsx"></script>
+<script type="text/babel" src="src/FAQ.jsx"></script>
+<script type="text/babel" src="src/Contact.jsx"></script>
+<script type="text/babel" src="src/Footer.jsx"></script>
+<script type="text/babel" src="src/App.jsx"></script>
+</body>
+</html>
