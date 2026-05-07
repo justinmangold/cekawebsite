@@ -57,7 +57,7 @@ const ServiceCard = ({ icon, title, desc, bullets, featured }) => {
     <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
          style={{
            position: 'relative', background: '#fff', borderRadius: 20,
-           padding: 28, overflow: 'hidden',
+           padding: 28, overflow: 'hidden', height: '100%',
            display: 'flex', flexDirection: 'column', gap: 14,
            border: `1px solid ${hover ? '#C2E5A8' : '#E2E6DE'}`,
            boxShadow: hover
