@@ -15,8 +15,7 @@ const SERVICES = [
   {
     icon: 'building',    title: 'Treppenhausreinigung',
     desc: 'Gepflegte Hausflure für Wohngebäude und Mietergemeinschaften — regelmäßig, zuverlässig, fair kalkuliert.',
-    bullets: ['Wöchentlich oder 14-täglich', 'Inkl. Geländer & Briefkästen', 'Faire Monatspauschale'],
-    featured: true,
+    bullets: ['Wöchentlich', 'Inkl. Geländer & Briefkästen', 'Faire Monatspauschale'],
   },
   {
     icon: 'window',      title: 'Fensterreinigung',
@@ -41,7 +40,8 @@ const SERVICES = [
   {
     icon: 'container',   title: 'Baucontainerreinigung',
     desc: 'Schnelle Reinigung von Bau- und Sanitärcontainern direkt auf der Baustelle.',
-    bullets: ['Sanitärcontainer', 'Aufenthaltscontainer', 'Direkt auf der Baustelle'],
+    bullets: ['Sanitärcontainer', 'Wohn- & Aufenthaltscontainer', 'Direkt auf der Baustelle'],
+    featured: true,
   },
 ];
 

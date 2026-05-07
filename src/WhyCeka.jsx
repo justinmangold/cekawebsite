@@ -1,7 +1,7 @@
 /* global React, Container, Section, Button, Icon, Eyebrow, Reveal */
 
 const POINTS = [
-  { icon: 'check',  title: 'Festes, geschultes Team',     desc: 'Keine wechselnden Subunternehmer — Sie kennen die Menschen, die bei Ihnen reinigen.' },
+  { icon: 'check',  title: 'Festes, geschultes Team',     desc: 'Keine wechselnden Gesichter — Sie kennen die Menschen, die bei Ihnen reinigen.' },
   { icon: 'leaf',   title: 'Umweltfreundliche Mittel',    desc: 'Standard sind biologisch abbaubare Reiniger und sparsamer Wassereinsatz.' },
   { icon: 'pin',    title: 'Kurze Wege — schnelle Reaktion', desc: 'Wir arbeiten regional und sind schnell vor Ort. Persönlich erreichbar, ohne lange Wartezeiten.' },
   { icon: 'phone',  title: 'Persönlicher Ansprechpartner', desc: 'Wir erstellen Ihr Angebot direkt vor Ort — kostenlos, unverbindlich und ohne Überraschungen.' },

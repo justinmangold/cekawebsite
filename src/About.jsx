@@ -50,8 +50,8 @@ const About = ({ tweaks = {} }) => {
               <p style={{
                 fontFamily: 'Inter', fontSize: 16, lineHeight: 1.6, color: '#5C6B55', margin: 0,
               }}>
-                Wir arbeiten mit einem festen, geschulten Team. Keine ständig wechselnden
-                Subunternehmer, keine versteckten Kosten. Stattdessen: feste Ansprechpartner,
+                Wir arbeiten mit einem festen, geschulten Team. Keine wechselnden Gesichter,
+                keine versteckten Kosten. Stattdessen: feste Ansprechpartner,
                 klare Absprachen und die Sorgfalt eines kleinen Betriebs, der seine Kunden kennt.
               </p>
 

@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     q: 'Sind eure Mitarbeiter versichert?',
-    a: 'Ja. Alle Mitarbeitenden sind sozialversicherungspflichtig festangestellt — keine Subunternehmer. Der Betrieb ist vollständig haftpflichtversichert.',
+    a: 'Ja. Unser Team arbeitet mit festen, vertrauten Gesichtern. Der Betrieb ist vollständig haftpflichtversichert.',
   },
   {
     q: 'Wie wird abgerechnet?',
