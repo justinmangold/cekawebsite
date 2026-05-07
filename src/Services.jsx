@@ -40,8 +40,13 @@ const SERVICES = [
   {
     icon: 'container',   title: 'Baucontainerreinigung',
     desc: 'Schnelle Reinigung von Bau- und Sanitärcontainern direkt auf der Baustelle.',
-    bullets: ['Sanitärcontainer', 'Wohn- & Aufenthaltscontainer', 'Direkt auf der Baustelle'],
+    bullets: ['Sanitärcontainer', 'Aufenthaltscontainer', 'Direkt auf der Baustelle'],
     featured: true,
+  },
+  {
+    icon: 'building',    title: 'Wohncontainerreinigung',
+    desc: 'Professionelle Reinigung von Wohncontainern — für Baustellen, temporäre Unterkünfte und Übergangsquartiere.',
+    bullets: ['Wohncontainer & Unterkünfte', 'Regelmäßig oder einmalig', 'Schnell & unkompliziert'],
   },
 ];
 
@@ -110,7 +115,7 @@ const Services = () => (
           letterSpacing: '-0.02em', color: '#14210C', margin: 0,
           maxWidth: 720, textWrap: 'balance',
         }}>
-          Acht Reinigungsleistungen.<br/>Ein verlässliches Team.
+          Neun Reinigungsleistungen.<br/>Ein verlässliches Team.
         </h2>
         <p style={{
           fontFamily: 'Inter, sans-serif', fontSize: 17, lineHeight: 1.55,

@@ -61,7 +61,7 @@ const Footer = () => (
             {[
               'Unterhaltsreinigung', 'Grundreinigung', 'Treppenhausreinigung',
               'Fensterreinigung', 'Praxisreinigung', 'Schulreinigung',
-              'Sonderreinigung', 'Baucontainer',
+              'Sonderreinigung', 'Baucontainer', 'Wohncontainer',
             ].map(l => (
               <li key={l}><a href="#services" style={{
                 fontFamily: 'Inter, sans-serif', fontSize: 14, color: '#14210C',
