@@ -24,8 +24,7 @@ const App = () => {
         <WhyCeka tweaks={tweaks}/>
         <About tweaks={tweaks}/>
         <Process tweaks={tweaks}/>
-        <Testimonials tweaks={tweaks}/>
-        <FAQ tweaks={tweaks}/>
+<FAQ tweaks={tweaks}/>
         <Contact tweaks={tweaks}/>
       </main>
       <Footer/>
