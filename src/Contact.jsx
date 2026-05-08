@@ -32,11 +32,13 @@ const Contact = () => {
   });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
   const [focus, setFocus] = useState(null);
 
   const update = (k, v) => { setForm(f => ({ ...f, [k]: v })); setErrors(e => ({ ...e, [k]: null })); };
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
     const errs = {};
     if (!form.name.trim()) errs.name = 'Bitte Namen angeben.';
@@ -44,7 +46,31 @@ const Contact = () => {
     if (!form.phone.trim()) errs.phone = 'Bitte Telefonnummer angeben.';
     if (!form.accept) errs.accept = 'Bitte Datenschutz akzeptieren.';
     setErrors(errs);
-    if (Object.keys(errs).length === 0) setSubmitted(true);
+    if (Object.keys(errs).length > 0) return;
+
+    setSending(true);
+    setSendError(false);
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'kontakt',
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          service: form.service,
+          address: form.address || '',
+          message: form.message || '',
+        }).toString(),
+      });
+      if (res.ok) setSubmitted(true);
+      else setSendError(true);
+    } catch {
+      setSendError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -205,9 +231,15 @@ const Contact = () => {
                 </span>
               </label>
 
+              {sendError && (
+                <div style={{ fontSize: 14, color: '#A8442A', background: '#FDF2F0', border: '1px solid #F5C6BC', borderRadius: 10, padding: '12px 16px' }}>
+                  Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an <a href="mailto:info@ceka-reinigung.de" style={{ color: '#A8442A' }}>info@ceka-reinigung.de</a>.
+                </div>
+              )}
               <div className="ceka-contact-submit" style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 4 }}>
-                <Button variant="primary" size="lg" type="submit" iconRight="arrowRight">
-                  Anfrage absenden
+                <Button variant="primary" size="lg" type="submit" iconRight="arrowRight"
+                        style={{ opacity: sending ? 0.7 : 1, pointerEvents: sending ? 'none' : 'auto' }}>
+                  {sending ? 'Wird gesendet…' : 'Anfrage absenden'}
                 </Button>
               </div>
             </form>
