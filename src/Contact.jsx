@@ -51,21 +51,20 @@ const Contact = () => {
     setSending(true);
     setSendError(false);
     try {
-      const res = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'kontakt',
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          service: form.service,
-          address: form.address || '',
-          message: form.message || '',
-        }).toString(),
+      const now = new Date();
+      const date = now.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+      const time = now.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+      await window.emailjs.send('service_69s174s', 'template_zy02ohv', {
+        name:    form.name,
+        email:   form.email,
+        phone:   form.phone,
+        service: form.service,
+        address: form.address || '—',
+        message: form.message || '—',
+        date,
+        time,
       });
-      if (res.ok) setSubmitted(true);
-      else setSendError(true);
+      setSubmitted(true);
     } catch {
       setSendError(true);
     } finally {
